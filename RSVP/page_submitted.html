@@ -1,6 +1,35 @@
 <html>
-    <head><script>
-        //get parameters from query string
-</script></head>
-    <body><p> Thank you for submitting</p></body>
+    <head>
+        <link src ="RSVP.html">
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/core.js"></script>
+        <script>        
+        
+            function getString(){
+            
+                var values = window.location.search.slice(1).split("&");
+                for (var x = 0; x < values.length; x++){
+                    var fname = values[0].split("=");
+                    var lname = values[1].split("=");
+                    console.log (fname);
+                    console.log (lname);
+                    
+                };
+               
+            
+
+           
+                /*return ("Hey"+ " " +list+" "+ "thank you for RSVPying");
+                document.getElementById("p1").innerHTML = ;*/
+            
+            };
+    
+            document.getElementById("p1").innerHTML = values;
+              
+            //get parameters from query string
+        </script>
+    </head>
+    <body onload = "getString()">
+         
+    <p id="p1"></p>
+    </body>
 </html>
