@@ -3,33 +3,78 @@
         <link src ="RSVP.html">
          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/core.js"></script>
         <script>        
-        
-            function getString(){
-            
+            //This function selects and displays the values entered in the RSVP page, basically  
+            function getValues(){
                 var values = window.location.search.slice(1).split("&");
                 for (var x = 0; x < values.length; x++){
+                    console.log (values[x])
+                }
+                     
                     var fname = values[0].split("=");
                     var lname = values[1].split("=");
-                    console.log (fname);
-                    console.log (lname);
+                    var cell = values[2].split("=");
+                    var email = values[3].split("=");
+                    var numOfPeople = values[4].split("=");
+                    var diet = values[5].split("=");
+                    //console.log(values);
                     
-                };
-               
-            
+                    str = ("Hey"+ " " +fname[1]+" "+lname[1]+" "+ "thank you for RSVPying");
 
-           
-                /*return ("Hey"+ " " +list+" "+ "thank you for RSVPying");
-                document.getElementById("p1").innerHTML = ;*/
+                    var firstName = fname[1];
+                    var lastName = lname[1]
+                    var cellNum = cell[1]
+                    var mail = email[1].replace("%40", "@");
+                    var alergicTo= diet[1]
+                    var peopleNum = numOfPeople[1]
+
+                    document.getElementById("p1").innerHTML = str;
+                    document.getElementById("fname").innerHTML = firstName;
+                    document.getElementById("lname").innerHTML = lastName;
+                    document.getElementById("cell").innerHTML = cellNum;
+                    document.getElementById("email").innerHTML = mail;
+                    document.getElementById("num").innerHTML = peopleNum;
+                    document.getElementById("diet").innerHTML = alergicTo;
+                    
+                 }; 
             
-            };
-    
-            document.getElementById("p1").innerHTML = values;
-              
-            //get parameters from query string
+                 
+                      
         </script>
     </head>
-    <body onload = "getString()">
+    <body onload = "getValues()">
          
-    <p id="p1"></p>
+    <p id="p1">Confirmation page</p>
+    <table>
+    <div class = "row"><th class ="col-md-12">First Name:</th>
+        <div ><td id = "fname">mark</td><div></div><br>
+    </table>
+
+     <table>
+    <div class = "row"><th class ="col-md-12">Last Name:</th>
+        <div ><td id = "lname">mark</td><div></div><br>
+    </table>
+
+     <table>
+    <div class = "row"><th class ="col-md-12">Contact Number:</th>
+        <div ><td id = "cell">mark</td><div></div><br>
+    </table>
+
+     <table>
+    <div class = "row"><th class ="col-md-12">Email Adddress:</th>
+        <div ><td id = "email">mark</td><div></div><br>
+    </table>
+
+     <table>
+    <div class = "row"><th class ="col-md-12">What you Don't like:</th>
+        <div ><td id = "diet">mark</td><div></div><br>
+    </table>
+
+     <table>
+    <div class = "row"><th class ="col-md-12">Number of People coming with:</th>
+        <div ><td id = "num">mark</td><div></div><br>
+    </table>
+
+
+
     </body>
 </html>

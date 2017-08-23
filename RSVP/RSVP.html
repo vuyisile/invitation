@@ -6,13 +6,25 @@
     function submitting(fname,lname) {
         document.getElementById("form").submit();
     }
-  </script>
+    
+ </script>
 </head>
 <body>
   <form id="form" action="page_submitted.html">
     First name: <input type="text" name="fname"><br>
-    Last name: <input type="text" name="lname"><br><br>
-    <input type="button" onclick="submitting()" value="Submit">
+    Last name: <input type="text" name="lname"><br>
+    Contact: <input type="tel" name="contact"><br>
+    Email: <input type="email" name="email"><br>
+    Bringing someone?:<input type="number" name="partner"><br>
+    <label>What don't you eat?:</label>
+    <select name="Dietary">      
+    <option value="Pork">Pork</option>
+    <option value="Beef">Beef</option>
+    <option value="Chicken">Chicken</option>
+    <option value="Nuts">Nuts</option>
+    <option value="Cheese">Cheese</option>
+  </select><br>
+    <input type="button" onclick="submitting()" value="Submit"><br>
   </form>
 </body>
 </html>
