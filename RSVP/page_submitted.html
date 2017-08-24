@@ -1,6 +1,9 @@
 <html>
     <head>
         <link src ="RSVP.html">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/core.js"></script>
         <script>        
             //This function selects and displays the values entered in the RSVP page, basically  
@@ -17,7 +20,7 @@
                     var numOfPeople = values[4].split("=");
                     var diet = values[5].split("=");
                     //console.log(values);
-                    
+
                     str = ("Hey"+ " " +fname[1]+" "+lname[1]+" "+ "thank you for RSVPying");
 
                     var firstName = fname[1];
@@ -39,39 +42,48 @@
             
                  
                       
-        </script>
+</script>
+<style>
+    
+    td{border:solid;
+       border-radius:4px;
+       color: #555}
+     .container-fluid{background-color: #cad}
+</style>
     </head>
-    <body onload = "getValues()">
+
+    <body class="container-fluid"onload = "getValues()">
          
-    <p id="p1">Confirmation page</p>
+    <h1><p id="p1">Confirmation page</p></h1>
     <table>
-    <div class = "row"><th class ="col-md-12">First Name:</th>
-        <div ><td id = "fname">mark</td><div></div><br>
-    </table>
-
-     <table>
-    <div class = "row"><th class ="col-md-12">Last Name:</th>
-        <div ><td id = "lname">mark</td><div></div><br>
-    </table>
-
-     <table>
-    <div class = "row"><th class ="col-md-12">Contact Number:</th>
-        <div ><td id = "cell">mark</td><div></div><br>
-    </table>
-
-     <table>
-    <div class = "row"><th class ="col-md-12">Email Adddress:</th>
-        <div ><td id = "email">mark</td><div></div><br>
-    </table>
-
-     <table>
-    <div class = "row"><th class ="col-md-12">What you Don't like:</th>
-        <div ><td id = "diet">mark</td><div></div><br>
-    </table>
-
-     <table>
-    <div class = "row"><th class ="col-md-12">Number of People coming with:</th>
-        <div ><td id = "num">mark</td><div></div><br>
+        <tr>
+            <th>.....</th>
+            <th>Data</th>
+        </tr>
+            
+        <tr>
+            <td>First Name:</td>
+            <td id = "fname">mark</td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td id = "lname">mark</td>
+        </tr>
+        <tr>
+            <td>Contact Number:</td>
+            <td id = "cell">mark</td>
+        </tr>
+        <tr>
+            <td>Email Adddress:</td>
+            <td id = "email">mark</td>
+        <tr>
+            <td>What you Don't like:</td>
+            <td id = "diet">mark</td>
+        </tr>
+        <tr>
+            <td>Number of people:</td>
+            <td id = "num">mark</td>
+        <tr>
     </table>
 
 

@@ -2,29 +2,67 @@
 <html>
 <head>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/core.js"></script>
-  <script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script>
     function submitting(fname,lname) {
         document.getElementById("form").submit();
     }
-    
- </script>
+</script>
+<style>
+    .container-fluid{background-color: #cad}
+</style>
+
 </head>
-<body>
-  <form id="form" action="page_submitted.html">
-    First name: <input type="text" name="fname"><br>
-    Last name: <input type="text" name="lname"><br>
-    Contact: <input type="tel" name="contact"><br>
-    Email: <input type="email" name="email"><br>
-    Bringing someone?:<input type="number" name="partner"><br>
-    <label>What don't you eat?:</label>
-    <select name="Dietary">      
+<body class="container-fluid">
+<form id="form" action="page_submitted.html">
+
+<div class = "row">
+    <div class ="col-md-4"><label>First name:</label></div> 
+    <div class ="col-md-4"><input type="text" name="fname"></div>
+</div>
+<br>
+
+<div class = "row">
+    <div class ="col-md-4"><label>Last name:</label> </div>
+    <div class ="col-md-4"><input type="text" name="lname"></div>
+</div>
+<br>
+
+<div class = "row">
+<div class ="col-md-4"><label>Contacts:</label> </div>
+<div class ="col-md-4"><input type="tel" name="contact"></div>
+</div>
+<br>
+
+<div class = "row">
+<div class ="col-md-4"><label>Email:</label> </div>
+<div class ="col-md-4"><input type="email" name="email"></div>
+</div>
+<br>
+
+<div class = "row">
+<div class ="col-md-4"><label>How many are you bringing?:</label></div>
+<div class ="col-md-4"><input type="number" name="partner"></div>
+</div>
+<br>
+
+<div class = "row">
+<div class ="col-md-4"><label>What don't you eat?:</label></div>
+<div class ="col-md-4"><select class ="dropdown" name="Dietary">      
     <option value="Pork">Pork</option>
     <option value="Beef">Beef</option>
     <option value="Chicken">Chicken</option>
     <option value="Nuts">Nuts</option>
     <option value="Cheese">Cheese</option>
-  </select><br>
-    <input type="button" onclick="submitting()" value="Submit"><br>
+</select></div>
+</div>
+<br>
+
+<div class = "row">
+<div class ="col-md-4"><input class="btn btn-success" type="button" onclick="submitting()" value="Submit"></div>
+</div>
+<br>
   </form>
 </body>
 </html>
